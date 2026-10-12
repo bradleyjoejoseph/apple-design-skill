@@ -15,7 +15,7 @@ template.
 npx skills add dickwu/apple-design-skill
 ```
 
-This works for Claude Code, Codex, Cursor, OpenCode, Windsurf, and every other agent the
+This works for Claude Code, Codex, Cursor, Antigravity, OpenCode, Windsurf, and every other agent the
 [skills CLI](https://skills.sh) supports. Useful variations:
 
 ```bash
@@ -56,6 +56,18 @@ git submodule add https://github.com/dickwu/apple-design-skill.git .design-rules
 Follow `.design-rules/SKILL.md`. Route topics with `.design-rules/references/hig-lookup.md` and
 load the relevant `.design-rules/references/hig/*.md` files before giving design feedback.
 ```
+
+### Antigravity
+
+Install with `npx skills add dickwu/apple-design-skill -a antigravity`, or clone the repository into
+`.agents/skills/apple-design` in your project or global `~/.gemini/antigravity/` configuration:
+
+```bash
+git clone https://github.com/dickwu/apple-design-skill.git .agents/skills/apple-design
+```
+
+You can also keep its `GEMINI.md` next to your own project rules to activate Apple HIG design
+reviews automatically in your Antigravity workspace.
 
 ### Other agents
 
@@ -116,6 +128,7 @@ apple-design-skill/
 ├── SKILL.md                     # The skill: stance, principles, lenses, report format, improvement mode
 ├── AGENTS.md                    # Operating manual for agents and contributors
 ├── .cursorrules                 # Cursor entry point
+├── GEMINI.md                    # Antigravity entry point
 ├── scripts/
 │   └── pull-hig.mjs             # Re-pulls the guidelines from developer.apple.com
 └── references/
